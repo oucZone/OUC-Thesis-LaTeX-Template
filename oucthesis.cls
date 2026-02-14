@@ -279,15 +279,19 @@
   \pagenumberingnoreset{arabic}
 }
 
-\newfontface\timesfont{Times New Roman}
-
+% \newfontface\timesfont{Times New Roman}
+\newfontface\timesfont[
+  BoldFont = Times New Roman Bold,
+  ItalicFont = Times New Roman Italic,
+  BoldItalicFont = Times New Roman Bold Italic
+]{Times New Roman}
 \newenvironment{enabstract}{%
   \clearpage
   \pagestyle{plain}
   \pagenumberingnoreset{Roman}
   \ouc@setenglish
   \let\clearpage\relax
-  \ouc@chapter[ABSTRACT]{\timesfont{ABSTRACT}}
+  \ouc@chapter[ABSTRACT]{\bfseries\timesfont{ABSTRACT}}
   \let\clearpage\standardclearpage
   \vspace{1em}
 }{
@@ -299,7 +303,7 @@
 
 
 % TOC: 英文目录设置
-\newcommand\engcontentsname{\timesfont{Contents}}
+\newcommand\engcontentsname{\bfseries\timesfont{Contents}}
 \newcommand\tableofengcontents{%
   \pagestyle{plain}
   \pagenumberingnoreset{Roman}
