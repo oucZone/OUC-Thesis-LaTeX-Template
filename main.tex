@@ -61,23 +61,36 @@
 \newcommand{\loflabel}{图} 
 \renewcommand{\numberline}[1]{\loflabel~#1\hspace*{1em}}
 \renewcommand{\listfigurename}{插~~图~~清~~单} 
-\begin{center}
-\clearpage
-\phantomsection\addcontentsline{toc}{chapter}{插\hspace{6pt}图\hspace{6pt}清\hspace{6pt}单}
-\phantomsection\addengcontent{chapter}{Figure list}
-{\listoffigures}
-\end{center}
+% \begin{center}
+% \clearpage
+% \phantomsection\addcontentsline{toc}{chapter}{插\hspace{6pt}图\hspace{6pt}清\hspace{6pt}单}
+% \phantomsection\addengcontent{chapter}{Figure list}
+% {\listoffigures}
+% \end{center}
+
+% %\clearpage 控制前面目录最后是否要换页，不换页的话，会压紧显示在一页上
+\phantomsection
+\addcontentsline{toc}{chapter}{插\hspace{6pt}图\hspace{6pt}清\hspace{6pt}单}
+\addengcontent{chapter}{Figure list}
+\listoffigures
+% 上方的注释/显示可以替换
 
 
 \newcommand{\lotlabel}{表}
 \renewcommand{\numberline}[1]{\lotlabel~#1\hspace*{1em}}
 \renewcommand{\listtablename}{表~~格~~清~~单} 
-\begin{center}
+% \begin{center}
+% \clearpage
+% \phantomsection\addcontentsline{toc}{chapter}{表\hspace{6pt}格\hspace{6pt}清\hspace{6pt}单}
+% \phantomsection\addengcontent{chapter}{Table list}
+% {\listoftables}
+% \end{center}
 \clearpage
-\phantomsection\addcontentsline{toc}{chapter}{表\hspace{6pt}格\hspace{6pt}清\hspace{6pt}单}
-\phantomsection\addengcontent{chapter}{Table list}
-{\listoftables}
-\end{center}
+\phantomsection
+\addcontentsline{toc}{chapter}{表\hspace{6pt}格\hspace{6pt}清\hspace{6pt}单}
+\addengcontent{chapter}{Table list}
+\listoftables
+% 上方的注释/显示可以替换
 \clearpage
 
 % 中文注释表
